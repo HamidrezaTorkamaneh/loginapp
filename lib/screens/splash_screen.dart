@@ -21,12 +21,13 @@ class _SplashScreenState extends State<SplashScreen>
   late final AnimationController _controller =
       AnimationController(vsync: this, duration: Duration(seconds: 2))
         ..repeat();
+
   @override
   void initState() {
     super.initState();
     Timer(
       Duration(seconds: 5),
-          () => Navigator.push(
+      () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => LoginScreen(),
@@ -34,12 +35,15 @@ class _SplashScreenState extends State<SplashScreen>
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/effect.png')),
+          image: DecorationImage(
+            image: AssetImage('assets/images/effect1.png'),
+          ),
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -73,7 +77,6 @@ class _SplashScreenState extends State<SplashScreen>
                     size: 25,
                   ),
                 ),
-
               ],
             ),
           ),

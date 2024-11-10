@@ -12,7 +12,7 @@ class CustomIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      'assets/images/${icon}_icon.svg',
+      'assets/images/icon_${icon}.svg',
       width: size,
       color: color,
     );
