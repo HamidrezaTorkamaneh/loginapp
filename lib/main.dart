@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:loginapp/screens/login_screen.dart';
-import 'package:loginapp/screens/splash_screen.dart';
+import 'package:loginapp/screens/signup_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:loginapp/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +30,11 @@ class MyApp extends StatelessWidget {
             fontSize: 16,
             color: Colors.white,
           ),
+          headline1: TextStyle(
+            fontSize: 16,
+            fontFamily: 'EM',
+            color: Colors.black54,
+          )
         ),
       ),
       localizationsDelegates: const [
@@ -41,7 +46,7 @@ class MyApp extends StatelessWidget {
         Locale("fa", "IR"),
       ],
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }

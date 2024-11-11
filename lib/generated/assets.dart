@@ -16,9 +16,12 @@ class Assets {
   static const String imagesEffect1 = 'assets/images/effect1.png';
   static const String imagesEffect2 = 'assets/images/effect2.png';
   static const String imagesEllipse1 = 'assets/images/ellipse1.png';
+  static const String imagesIconAlert = 'assets/images/icon_alert.svg';
   static const String imagesIconArrowBackCircle = 'assets/images/icon_arrow_back_circle.svg';
+  static const String imagesIconArrowLeftCircle = 'assets/images/icon_arrow_left_circle.svg';
   static const String imagesIconCall = 'assets/images/icon_call.svg';
   static const String imagesIconEmail = 'assets/images/icon_email.svg';
   static const String imagesIconLoading = 'assets/images/icon_loading.svg';
+  static const String imagesIconUser = 'assets/images/icon_user.svg';
 
 }
