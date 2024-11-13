@@ -1,13 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'cusotm_icon.dart';
-
-class MyButton extends StatelessWidget{
+class MyButton2 extends StatelessWidget{
   void Function() ontap;
   String text;
-  String icon;
-  MyButton({super.key,required this.text,required this.icon,required this.ontap});
+
+  MyButton2({super.key,required this.text,required this.ontap});
 
   @override
   Widget build(BuildContext context) {
@@ -31,24 +29,10 @@ class MyButton extends StatelessWidget{
         child: InkWell(
           borderRadius: BorderRadius.circular(25),
           onTap: ontap,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 22),
-            child: Row(
-              children: [
-                Text(
-                  text,
-                  style: theme.textTheme.bodyText2,
-                ),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8),
-                  child: CustomIcon(
-                    icon: icon,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                )
-              ],
+          child: Center (
+            child: Text(
+              text,
+              style: theme.textTheme.headline2,
             ),
           ),
         ),

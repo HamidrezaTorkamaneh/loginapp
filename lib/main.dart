@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:loginapp/screens/signup_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:loginapp/screens/enter_code/email_code_screen.dart';
+import 'package:loginapp/screens/enter_code/number_code_screen.dart';
 import 'package:loginapp/screens/splash_screen.dart';
 
 void main() {
@@ -11,7 +12,9 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
+
   Widget build(BuildContext context) {
+    FocusManager.instance.primaryFocus?.unfocus();
     return MaterialApp(
       theme: ThemeData(
         textTheme: TextTheme(
@@ -34,7 +37,12 @@ class MyApp extends StatelessWidget {
             fontSize: 16,
             fontFamily: 'EM',
             color: Colors.black54,
-          )
+          ),
+            headline2: TextStyle(
+              fontSize: 16,
+              fontFamily: 'ES',
+              color: Colors.white,
+            )
         ),
       ),
       localizationsDelegates: const [
@@ -46,7 +54,7 @@ class MyApp extends StatelessWidget {
         Locale("fa", "IR"),
       ],
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home:SplashScreen(),
     );
   }
 }

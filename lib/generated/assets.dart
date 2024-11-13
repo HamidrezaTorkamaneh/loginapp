@@ -19,6 +19,7 @@ class Assets {
   static const String imagesIconAlert = 'assets/images/icon_alert.svg';
   static const String imagesIconArrowBackCircle = 'assets/images/icon_arrow_back_circle.svg';
   static const String imagesIconArrowLeftCircle = 'assets/images/icon_arrow_left_circle.svg';
+  static const String imagesIconAuth = 'assets/images/icon_auth.svg';
   static const String imagesIconCall = 'assets/images/icon_call.svg';
   static const String imagesIconEmail = 'assets/images/icon_email.svg';
   static const String imagesIconLoading = 'assets/images/icon_loading.svg';

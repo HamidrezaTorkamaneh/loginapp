@@ -1,20 +1,24 @@
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:loginapp/screens/signup_by_email.dart';
+import 'package:loginapp/screens/signup_screens/signup_screen.dart';
+import '../../widgets/appbar_button.dart';
+import '../../widgets/custom_appbar.dart';
+import '../../widgets/custom_image.dart';
+import '../../widgets/my_button1.dart';
+import '../../widgets/my_text_button.dart';
+import 'login_by_email_screen.dart';
 
-import 'package:loginapp/widgets/custom_image.dart';
-import 'package:loginapp/widgets/my_button.dart';
-import 'package:loginapp/widgets/my_text_button.dart';
-import '../widgets/appbar_button.dart';
-import '../widgets/custom_appbar.dart';
+import 'login_by_number_screen.dart';
 
-class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
+
+class LoginScreen extends StatelessWidget{
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
+    final ThemeData theme=Theme.of(context);
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
@@ -70,37 +74,50 @@ class SignupScreen extends StatelessWidget {
             ),
             SizedBox(height: 180),
             Text(
-              'عضویت کاربران',
+              'ورود کاربران',
               style: theme.textTheme.subtitle1,
             ),
             SizedBox(height: 20),
             Text(
-              'در صورت عضویت در اپلیکیشن دوازده، ضمن برخورداری از تمامی امکانات برنامه، قابلیت شخصی سازی منوها برای شما فراهم می شود.',
+              'در صورت ورود در اپلیکیشن دوازده، ضمن برخورداری از تمامی امکانات برنامه، قابلیت شخصی سازی منوها برای شما فراهم می شود.',
               style: theme.textTheme.bodyText1,
               textAlign: TextAlign.justify,
             ),
             SizedBox(height: 60),
-            MyButton(text: 'عضویت با شماره همراه', icon: 'call', ontap: () {}),
+            MyButton1(text: 'ورود با شماره همراه', icon: 'call', ontap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => LoginByNumberScreen(),
+                ),
+              );
+            }),
             SizedBox(height: 20),
-            MyButton(
-              text: 'عضویت  با ایمیل',
+            MyButton1(
+              text: 'ورود  با ایمیل',
               icon: 'email',
               ontap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => SignupByEmail(),
+                    builder: (context) => LoginByEmailScreen(),
                   ),
                 );
               },
             ),
             Spacer(),
             MyTextButton(
-              text: 'ورود به حساب کاربری',
-              ontap: () {}, icon: 'arrow_left_circle',
+              text: 'عضویت',
+              ontap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => SignupScreen(),
+                  ),
+                );
+              }, icon: 'arrow_left_circle',
             ),
           ],
         ),
       ),
     );
   }
+
 }

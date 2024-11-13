@@ -2,8 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:loginapp/screens/signup_screen.dart';
+import 'package:loginapp/screens/signup_screens/signup_screen.dart';
 import 'package:loginapp/widgets/cusotm_icon.dart';
 import 'package:loginapp/widgets/custom_image.dart';
 import 'dart:math' as math;

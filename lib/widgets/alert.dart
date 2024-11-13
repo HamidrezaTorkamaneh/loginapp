@@ -13,31 +13,27 @@ class Alert extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 32,
-      width: 140,
+      width: 200,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8), color: CustomColor.redColor),
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 9),
-          child: Row(
-            children: [
-              CustomIcon(
-                icon: 'alert',
-                color: Colors.red,
-                size: 16,
-              ),
-              Spacer(),
-              Text(
-                text,
-                style: TextStyle(
-                  fontFamily: 'EM',
-                  fontSize: 7.5,
-                  color: Colors.red,
-                ),
-              ),
-            ],
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomIcon(
+            icon: 'alert',
+            color: Colors.red,
+            size: 16,
           ),
-        ),
+          SizedBox(width: 5),
+          Text(
+            text,
+            style: TextStyle(
+              fontFamily: 'EM',
+              fontSize: 9.5,
+              color: Colors.red,
+            ),
+          ),
+        ],
       ),
     );
   }

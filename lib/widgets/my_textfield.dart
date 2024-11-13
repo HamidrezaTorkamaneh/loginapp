@@ -16,7 +16,7 @@ class MyTextField extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
       width: double.infinity,
-      height: 85,
+      height: 83,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: Colors.white,
@@ -34,7 +34,10 @@ class MyTextField extends StatelessWidget {
               hintStyle: theme.textTheme.headline1,
             ),
           ),
-          CustomIcon(icon: icon, color: CustomColor.greenColor, size: 28),
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: CustomIcon(icon: icon, color: CustomColor.greenColor, size: 28),
+          ),
         ],
       ),
     );
