@@ -8,7 +8,9 @@ class MyTextField extends StatelessWidget {
   String text;
   String icon;
   TextInputType textInputType;
-  MyTextField({super.key, required this.text, required this.icon,required this.textInputType});
+  TextEditingController? controller;
+
+  MyTextField({super.key, required this.text, required this.icon,required this.textInputType, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class MyTextField extends StatelessWidget {
         alignment: Alignment.centerLeft,
         children: [
           TextField(
+            controller: controller,
             keyboardType: textInputType,
             style: theme.textTheme.headline1,
             decoration: InputDecoration(

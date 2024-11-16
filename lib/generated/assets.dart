@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
 
+  static const String dataEnterCode = 'lib/data/enter_code.dart';
+  static const String dataEnterCode.g = 'lib/data/enter_code.g.dart';
+  static const String enterCodeEmailCodeScreen = 'lib/screens/enter_code/email_code_screen.dart';
+  static const String enterCodeNumberCodeScreen = 'lib/screens/enter_code/number_code_screen.dart';
   static const String fontsEstedadBlack = 'assets/fonts/Estedad-Black.ttf';
   static const String fontsEstedadBold = 'assets/fonts/Estedad-Bold.ttf';
   static const String fontsEstedadExtraBold = 'assets/fonts/Estedad-ExtraBold.ttf';
@@ -11,6 +15,7 @@ class Assets {
   static const String fontsEstedadRegular = 'assets/fonts/Estedad-Regular.ttf';
   static const String fontsEstedadSemiBold = 'assets/fonts/Estedad-SemiBold.ttf';
   static const String fontsEstedadThin = 'assets/fonts/Estedad-Thin.ttf';
+  static const String generatedAssets = 'lib/generated/assets.dart';
   static const String imagesDavazdahLego = 'assets/images/davazdah_lego.png';
   static const String imagesDavazdahText = 'assets/images/davazdah_text.png';
   static const String imagesEffect1 = 'assets/images/effect1.png';
@@ -23,6 +28,27 @@ class Assets {
   static const String imagesIconCall = 'assets/images/icon_call.svg';
   static const String imagesIconEmail = 'assets/images/icon_email.svg';
   static const String imagesIconLoading = 'assets/images/icon_loading.svg';
+  static const String imagesIconRating = 'assets/images/icon_rating.svg';
   static const String imagesIconUser = 'assets/images/icon_user.svg';
+  static const String libMain = 'lib/main.dart';
+  static const String loginScreensLoginByEmailScreen = 'lib/screens/login_screens/login_by_email_screen.dart';
+  static const String loginScreensLoginByNumberScreen = 'lib/screens/login_screens/login_by_number_screen.dart';
+  static const String loginScreensLoginScreen = 'lib/screens/login_screens/login_screen.dart';
+  static const String screensSplashScreen = 'lib/screens/splash_screen.dart';
+  static const String signupScreensSignupByEmailScreen = 'lib/screens/signup_screens/signup_by_email_screen.dart';
+  static const String signupScreensSignupByNumberScreen = 'lib/screens/signup_screens/signup_by_number_screen.dart';
+  static const String signupScreensSignupScreen = 'lib/screens/signup_screens/signup_screen.dart';
+  static const String widgetsAlert = 'lib/widgets/alert.dart';
+  static const String widgetsAppbarButton = 'lib/widgets/appbar_button.dart';
+  static const String widgetsCircleItem = 'lib/widgets/circle_item.dart';
+  static const String widgetsCusotmIcon = 'lib/widgets/cusotm_icon.dart';
+  static const String widgetsCustomAppbar = 'lib/widgets/custom_appbar.dart';
+  static const String widgetsCustomColor = 'lib/widgets/custom_color.dart';
+  static const String widgetsCustomImage = 'lib/widgets/custom_image.dart';
+  static const String widgetsInputInformation = 'lib/widgets/input_information.dart';
+  static const String widgetsMyButton1 = 'lib/widgets/my_button1.dart';
+  static const String widgetsMyButton2 = 'lib/widgets/my_button2.dart';
+  static const String widgetsMyTextButton = 'lib/widgets/my_text_button.dart';
+  static const String widgetsMyTextfield = 'lib/widgets/my_textfield.dart';
 
 }

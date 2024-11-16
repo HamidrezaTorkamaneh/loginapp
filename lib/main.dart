@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:loginapp/screens/enter_code/email_code_screen.dart';
-import 'package:loginapp/screens/enter_code/number_code_screen.dart';
 import 'package:loginapp/screens/splash_screen.dart';
 
 void main() {
+  // await Hive.initFlutter();
+  // var box= await Hive.openBox('names');
+  // Hive.registerAdapter(EnterCodeAdapter());
+  // await Hive.openBox<EnterCode>('enterCodeBox');
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   @override
@@ -42,7 +46,17 @@ class MyApp extends StatelessWidget {
               fontSize: 16,
               fontFamily: 'ES',
               color: Colors.white,
-            )
+            ),
+          headline3: TextStyle(
+            fontSize: 10,
+            fontFamily: 'ES',
+            color: Colors.black,
+          ),
+          headline4: TextStyle(
+            fontSize: 10,
+            fontFamily: 'EM',
+            color: Colors.black,
+          ),
         ),
       ),
       localizationsDelegates: const [

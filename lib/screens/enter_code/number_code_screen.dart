@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loginapp/widgets/input_information.dart';
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
@@ -11,7 +12,8 @@ import '../../widgets/my_textfield.dart';
 import '../signup_screens/signup_by_number_screen.dart';
 
 class NumberCodeScreen extends StatelessWidget {
-  const NumberCodeScreen({super.key});
+  String number;
+  NumberCodeScreen({super.key, required this.number});
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +64,7 @@ class NumberCodeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 20),
                   child: Row(
                     children: [
-                      CircleItem(icon: 'auth'),
+                      CircleItem(icon: 'rating'),
                       Opacity(
                         opacity: 0.2,
                         child: CustomImage(image: 'effect2', size: 110),
@@ -85,6 +87,8 @@ class NumberCodeScreen extends StatelessWidget {
                 Center(
                   child: Alert(text: 'کد تایید وارد شده اشتباه است'),
                 ),
+                SizedBox(height: 20),
+                InputInformation(input: number.toString(), icon: 'call', typeName: 'شماره همراه')
               ],
             ),
           ),

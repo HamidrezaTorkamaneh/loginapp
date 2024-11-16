@@ -1,20 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loginapp/widgets/cusotm_icon.dart';
+import 'package:loginapp/widgets/custom_color.dart';
+import 'package:loginapp/widgets/input_information.dart';
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
-import '../../widgets/my_button2.dart';
-import '../../widgets/my_text_button.dart';
-import '../../widgets/my_textfield.dart';
-import '../signup_screens/signup_by_number_screen.dart';
 
 class EmailCodeScreen extends StatelessWidget {
-  const EmailCodeScreen({super.key});
+   String email;
+
+   EmailCodeScreen({super.key,required this.email});
 
   @override
   Widget build(BuildContext context) {
+
     final ThemeData theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
@@ -62,7 +64,7 @@ class EmailCodeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 20),
                   child: Row(
                     children: [
-                      CircleItem(icon: 'auth'),
+                      CircleItem(icon: 'rating'),
                       Opacity(
                         opacity: 0.2,
                         child: CustomImage(image: 'effect2', size: 110),
@@ -85,6 +87,8 @@ class EmailCodeScreen extends StatelessWidget {
                 Center(
                   child: Alert(text: 'کد تایید وارد شده اشتباه است'),
                 ),
+                SizedBox(height: 20),
+                InputInformation(input: email, icon: 'email', typeName: 'ایمیل'),
               ],
             ),
           ),

@@ -19,6 +19,7 @@ class LoginByNumberScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController numberController= TextEditingController();
     final ThemeData theme = Theme.of(context);
     return GestureDetector(
       onTap: (){
@@ -80,18 +81,18 @@ class LoginByNumberScreen extends StatelessWidget{
                   style: theme.textTheme.subtitle1,
                 ),
                 SizedBox(height: 20),
-                Alert(text: 'شماره همراه وارد شده استباه است'),
-
+                Alert(text: 'شماره همراه وارد شده اشتباه است'),
                 SizedBox(height: 20),
                 MyTextField(
+                  controller: numberController,
                     text: 'شماره موبایل',
                     icon: 'call',
-                    textInputType: TextInputType.emailAddress),
+                    textInputType: TextInputType.number),
                 SizedBox(height: 20),
                 MyButton2(text: 'ورود به برنامه', ontap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => NumberCodeScreen(),
+                      builder: (context) => NumberCodeScreen(number: numberController.text),
                     ),
                   );
                 }),

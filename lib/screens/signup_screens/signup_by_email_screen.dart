@@ -17,11 +17,14 @@ class SignupByEmailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    TextEditingController emailController=TextEditingController();
     final ThemeData theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
       },
+
       child: Scaffold(
         extendBodyBehindAppBar: true,
         appBar: PreferredSize(
@@ -86,6 +89,7 @@ class SignupByEmailScreen extends StatelessWidget {
                     textInputType: TextInputType.text),
                 SizedBox(height: 20),
                 MyTextField(
+                    controller:emailController,
                     text: 'ایمیل',
                     icon: 'email',
                     textInputType: TextInputType.emailAddress),
@@ -95,7 +99,7 @@ class SignupByEmailScreen extends StatelessWidget {
                     ontap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => EmailCodeScreen(),
+                          builder: (context) => EmailCodeScreen(email: emailController.text)
                         ),
                       );
                     }),

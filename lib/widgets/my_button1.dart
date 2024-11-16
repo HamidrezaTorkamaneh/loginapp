@@ -6,8 +6,8 @@ import 'cusotm_icon.dart';
 class MyButton1 extends StatelessWidget{
   void Function() ontap;
   String text;
-  String ?icon;
-  MyButton1({super.key,required this.text, this.icon,required this.ontap});
+  String icon;
+  MyButton1({super.key,required this.text,required this.icon,required this.ontap});
 
   @override
   Widget build(BuildContext context) {

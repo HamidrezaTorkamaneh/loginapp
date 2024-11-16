@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomIcon extends StatelessWidget {
-  String ?icon;
+  String icon;
   Color color;
   double size;
 
   CustomIcon(
-      {super.key,  this.icon, required this.color, required this.size});
+      {super.key, required this.icon, required this.color, required this.size});
 
   @override
   Widget build(BuildContext context) {
