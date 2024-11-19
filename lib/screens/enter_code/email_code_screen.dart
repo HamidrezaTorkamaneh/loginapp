@@ -6,17 +6,20 @@ import 'package:loginapp/widgets/input_information.dart';
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
+import '../../widgets/count_down.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
+import '../../widgets/my_button2.dart';
+import '../../widgets/my_text_button.dart';
+import '../../widgets/otp.dart';
 
 class EmailCodeScreen extends StatelessWidget {
-   String email;
+  String email;
 
-   EmailCodeScreen({super.key,required this.email});
+  EmailCodeScreen({super.key, required this.email});
 
   @override
   Widget build(BuildContext context) {
-
     final ThemeData theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
@@ -41,7 +44,7 @@ class EmailCodeScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.fromLTRB(22, 110, 22, 40),
+            padding: EdgeInsets.fromLTRB(22, 110, 22, 20),
             height: MediaQuery.sizeOf(context).height,
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -88,7 +91,38 @@ class EmailCodeScreen extends StatelessWidget {
                   child: Alert(text: 'کد تایید وارد شده اشتباه است'),
                 ),
                 SizedBox(height: 20),
-                InputInformation(input: email, icon: 'email', typeName: 'ایمیل'),
+                InputInformation(
+                  input: email,
+                  icon: 'email',
+                  typeName: 'ایمیل',
+                ),
+                SizedBox(height: 20),
+                OTP(),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    CustomIcon(
+                        icon: 'clock', color: CustomColor.greenColor, size: 25),
+                    SizedBox(width: 10),
+                    Text(
+                      'زمان باقی مانده تا ارسال مجدد',
+                      style: theme.textTheme.headline5,
+                    ),
+                    Spacer(),
+                    AddTimer(),
+                  ],
+                ),
+                SizedBox(height: 15),
+                MyButton2(
+                  text: 'تایید و ورود',
+                  ontap: () {},
+                ),
+                MyTextButton(
+                    text: 'تغییر شماره همراه',
+                    icon: 'return',
+                    ontap: () {
+                      Navigator.of(context).pop();
+                    })
               ],
             ),
           ),

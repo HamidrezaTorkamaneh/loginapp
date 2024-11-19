@@ -1,21 +1,54 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:loginapp/widgets/count_down.dart';
+import 'package:loginapp/widgets/cusotm_icon.dart';
+import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/input_information.dart';
+import 'package:loginapp/widgets/my_button2.dart';
+import 'package:loginapp/widgets/my_text_button.dart';
+import 'package:loginapp/widgets/otp.dart';
+import 'package:slide_countdown/slide_countdown.dart';
+
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
-import '../../widgets/my_button2.dart';
-import '../../widgets/my_text_button.dart';
-import '../../widgets/my_textfield.dart';
-import '../signup_screens/signup_by_number_screen.dart';
 
-class NumberCodeScreen extends StatelessWidget {
+class NumberCodeScreen extends StatefulWidget {
   String number;
+
   NumberCodeScreen({super.key, required this.number});
 
   @override
+  State<NumberCodeScreen> createState() => _NumberCodeScreenState();
+}
+
+class _NumberCodeScreenState extends State<NumberCodeScreen> {
+  int _seconds = 0;
+  Timer? _timer;
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  void startTimer() {
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        _seconds++;
+      });
+    });
+  }
+
+  void stopTimer() {
+    _timer?.cancel();
+    _seconds = 0;
+  }
+
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     return GestureDetector(
@@ -41,7 +74,7 @@ class NumberCodeScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.fromLTRB(22, 110, 22, 40),
+            padding: EdgeInsets.fromLTRB(22, 110, 22, 20),
             height: MediaQuery.sizeOf(context).height,
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -88,7 +121,38 @@ class NumberCodeScreen extends StatelessWidget {
                   child: Alert(text: 'کد تایید وارد شده اشتباه است'),
                 ),
                 SizedBox(height: 20),
-                InputInformation(input: number.toString(), icon: 'call', typeName: 'شماره همراه')
+                InputInformation(
+                  input: widget.number.toString(),
+                  icon: 'call',
+                  typeName: 'شماره همراه',
+                ),
+                SizedBox(height: 20),
+                OTP(),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    CustomIcon(
+                        icon: 'clock', color: CustomColor.greenColor, size: 25),
+                    SizedBox(width: 10),
+                    Text(
+                      'زمان باقی مانده تا ارسال مجدد',
+                      style: theme.textTheme.headline5,
+                    ),
+                    Spacer(),
+                    AddTimer(),
+                  ],
+                ),
+                SizedBox(height: 15),
+                MyButton2(
+                  text: 'تایید و ورود',
+                  ontap: () {},
+                ),
+                MyTextButton(
+                    text: 'تغییر شماره همراه',
+                    icon: 'return',
+                    ontap: () {
+                      Navigator.of(context).pop();
+                    })
               ],
             ),
           ),

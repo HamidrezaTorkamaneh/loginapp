@@ -25,7 +25,10 @@ class MyTextButton extends StatelessWidget {
               style: theme.textTheme.bodyText1?.apply(fontSizeDelta: 3),
             ),
             SizedBox(width: 10),
-            CustomIcon(icon: icon, color: Colors.white, size: 25)
+            Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: CustomIcon(icon: icon, color: Colors.white, size: 30),
+            )
           ],
         ),
       ),

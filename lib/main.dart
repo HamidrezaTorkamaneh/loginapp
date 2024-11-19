@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:loginapp/data/enter_code.dart';
+import 'package:loginapp/screens/enter_code/number_code_screen.dart';
+import 'package:loginapp/screens/login_screens/login_by_email_screen.dart';
+import 'package:loginapp/screens/login_screens/login_by_number_screen.dart';
 import 'package:loginapp/screens/splash_screen.dart';
 
 void main() {
@@ -23,39 +27,44 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: TextTheme(
           subtitle1: TextStyle(
-            fontFamily: 'EB',
+            fontFamily: 'YB',
             fontSize: 20,
             color: Colors.white,
           ),
           bodyText1: TextStyle(
-            fontFamily: 'EM',
+            fontFamily: 'YM',
             fontSize: 14,
             color: Colors.white,
           ),
           bodyText2: TextStyle(
-            fontFamily: 'EEB',
+            fontFamily: 'YB',
             fontSize: 16,
             color: Colors.white,
           ),
           headline1: TextStyle(
             fontSize: 16,
-            fontFamily: 'EM',
+            fontFamily: 'YM',
             color: Colors.black54,
           ),
             headline2: TextStyle(
               fontSize: 16,
-              fontFamily: 'ES',
+              fontFamily: 'YM',
               color: Colors.white,
             ),
           headline3: TextStyle(
             fontSize: 10,
-            fontFamily: 'ES',
+            fontFamily: 'YM',
             color: Colors.black,
           ),
           headline4: TextStyle(
             fontSize: 10,
-            fontFamily: 'EM',
+            fontFamily: 'YM',
             color: Colors.black,
+          ),
+          headline5: TextStyle(
+            fontFamily: 'YM',
+            fontSize: 10,
+            color: Colors.white,
           ),
         ),
       ),

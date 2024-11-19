@@ -15,6 +15,9 @@ class Assets {
   static const String fontsEstedadRegular = 'assets/fonts/Estedad-Regular.ttf';
   static const String fontsEstedadSemiBold = 'assets/fonts/Estedad-SemiBold.ttf';
   static const String fontsEstedadThin = 'assets/fonts/Estedad-Thin.ttf';
+  static const String fontsYekanBakhBold = 'assets/fonts/YekanBakh-Bold.ttf';
+  static const String fontsYekanBakhLight = 'assets/fonts/YekanBakh-Light.ttf';
+  static const String fontsYekanBakhMedium = 'assets/fonts/YekanBakh-Medium.ttf';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String imagesDavazdahLego = 'assets/images/davazdah_lego.png';
   static const String imagesDavazdahText = 'assets/images/davazdah_text.png';
@@ -26,9 +29,11 @@ class Assets {
   static const String imagesIconArrowLeftCircle = 'assets/images/icon_arrow_left_circle.svg';
   static const String imagesIconAuth = 'assets/images/icon_auth.svg';
   static const String imagesIconCall = 'assets/images/icon_call.svg';
+  static const String imagesIconClock = 'assets/images/icon_clock.svg';
   static const String imagesIconEmail = 'assets/images/icon_email.svg';
   static const String imagesIconLoading = 'assets/images/icon_loading.svg';
   static const String imagesIconRating = 'assets/images/icon_rating.svg';
+  static const String imagesIconReturn = 'assets/images/icon_return.svg';
   static const String imagesIconUser = 'assets/images/icon_user.svg';
   static const String libMain = 'lib/main.dart';
   static const String loginScreensLoginByEmailScreen = 'lib/screens/login_screens/login_by_email_screen.dart';
@@ -41,6 +46,7 @@ class Assets {
   static const String widgetsAlert = 'lib/widgets/alert.dart';
   static const String widgetsAppbarButton = 'lib/widgets/appbar_button.dart';
   static const String widgetsCircleItem = 'lib/widgets/circle_item.dart';
+  static const String widgetsCountDown = 'lib/widgets/count_down.dart';
   static const String widgetsCusotmIcon = 'lib/widgets/cusotm_icon.dart';
   static const String widgetsCustomAppbar = 'lib/widgets/custom_appbar.dart';
   static const String widgetsCustomColor = 'lib/widgets/custom_color.dart';
@@ -50,5 +56,6 @@ class Assets {
   static const String widgetsMyButton2 = 'lib/widgets/my_button2.dart';
   static const String widgetsMyTextButton = 'lib/widgets/my_text_button.dart';
   static const String widgetsMyTextfield = 'lib/widgets/my_textfield.dart';
+  static const String widgetsOtp = 'lib/widgets/otp.dart';
 
 }

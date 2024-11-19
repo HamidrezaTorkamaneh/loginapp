@@ -10,7 +10,12 @@ class MyTextField extends StatelessWidget {
   TextInputType textInputType;
   TextEditingController? controller;
 
-  MyTextField({super.key, required this.text, required this.icon,required this.textInputType, this.controller});
+  MyTextField(
+      {super.key,
+      required this.text,
+      required this.icon,
+      required this.textInputType,
+      this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +44,8 @@ class MyTextField extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 4),
-            child: CustomIcon(icon: icon, color: CustomColor.greenColor, size: 28),
+            child:
+                CustomIcon(icon: icon, color: CustomColor.greenColor, size: 28),
           ),
         ],
       ),
