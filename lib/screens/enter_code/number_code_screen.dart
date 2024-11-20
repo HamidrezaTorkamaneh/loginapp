@@ -148,11 +148,13 @@ class _NumberCodeScreenState extends State<NumberCodeScreen> {
                   ontap: () {},
                 ),
                 MyTextButton(
-                    text: 'تغییر شماره همراه',
-                    icon: 'return',
-                    ontap: () {
-                      Navigator.of(context).pop();
-                    })
+                  text: 'تغییر شماره همراه',
+                  icon: 'return',
+                  ontap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+
               ],
             ),
           ),

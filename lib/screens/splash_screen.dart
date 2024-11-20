@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loginapp/screens/login_screens/login_screen.dart';
 import 'package:loginapp/screens/signup_screens/signup_screen.dart';
 import 'package:loginapp/widgets/cusotm_icon.dart';
 import 'package:loginapp/widgets/custom_image.dart';
@@ -29,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen>
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => SignupScreen(),
+          builder: (context) => LoginScreen(),
         ),
       ),
     );

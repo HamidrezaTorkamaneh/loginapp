@@ -57,5 +57,6 @@ class Assets {
   static const String widgetsMyTextButton = 'lib/widgets/my_text_button.dart';
   static const String widgetsMyTextfield = 'lib/widgets/my_textfield.dart';
   static const String widgetsOtp = 'lib/widgets/otp.dart';
+  static const String widgetsPinCode = 'lib/widgets/pin_code.dart';
 
 }

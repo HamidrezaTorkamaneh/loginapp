@@ -30,7 +30,10 @@ class InputInformation extends StatelessWidget{
               style: theme.textTheme.headline3
           ),
           Spacer(),
-          Text(input,style: theme.textTheme.headline4),
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: Text(input,style: theme.textTheme.headline4),
+          ),
           SizedBox(width: 8),
           Padding(
             padding: const EdgeInsets.only(top: 5),

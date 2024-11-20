@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     FocusManager.instance.primaryFocus?.unfocus();
     return MaterialApp(
       theme: ThemeData(
-        textTheme: TextTheme(
+        textTheme:const  TextTheme(
           subtitle1: TextStyle(
             fontFamily: 'YB',
             fontSize: 20,
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
           ),
           headline4: TextStyle(
-            fontSize: 10,
+            fontSize: 13,
             fontFamily: 'YM',
             color: Colors.black,
           ),
