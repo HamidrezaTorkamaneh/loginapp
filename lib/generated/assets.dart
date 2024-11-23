@@ -2,8 +2,9 @@
 class Assets {
   Assets._();
 
+  static const String dataData = 'lib/data/data.dart';
   static const String dataEnterCode = 'lib/data/enter_code.dart';
-  static const String dataEnterCode.g = 'lib/data/enter_code.g.dart';
+  // static const String dataEnterCode.g = 'lib/data/enter_code.g.dart';
   static const String enterCodeEmailCodeScreen = 'lib/screens/enter_code/email_code_screen.dart';
   static const String enterCodeNumberCodeScreen = 'lib/screens/enter_code/number_code_screen.dart';
   static const String fontsEstedadBlack = 'assets/fonts/Estedad-Black.ttf';

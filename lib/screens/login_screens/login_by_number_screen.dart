@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loginapp/data/data.dart';
 import 'package:loginapp/screens/enter_code/number_code_screen.dart';
 
 import '../../widgets/alert.dart';
@@ -13,16 +14,15 @@ import '../../widgets/my_text_button.dart';
 import '../../widgets/my_textfield.dart';
 import 'login_by_email_screen.dart';
 
-
-class LoginByNumberScreen extends StatelessWidget{
-  const   LoginByNumberScreen({super.key});
+class LoginByNumberScreen extends StatelessWidget {
+  const LoginByNumberScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController numberController= TextEditingController();
+    TextEditingController numberController = TextEditingController();
     final ThemeData theme = Theme.of(context);
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
       },
       child: Scaffold(
@@ -84,18 +84,27 @@ class LoginByNumberScreen extends StatelessWidget{
                 Alert(text: 'شماره همراه وارد شده اشتباه است'),
                 SizedBox(height: 20),
                 MyTextField(
-                  controller: numberController,
+                    controller: numberController,
                     text: 'شماره موبایل',
                     icon: 'call',
                     textInputType: TextInputType.number),
                 SizedBox(height: 20),
-                MyButton2(text: 'ورود به برنامه', ontap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => NumberCodeScreen(number: numberController.text),
-                    ),
-                  );
-                }),
+                MyButton2(
+                    text: 'ورود به برنامه',
+                    ontap: () {
+                      try {
+                        loginPhone(numberController.text);
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                NumberCodeScreen(number: numberController.text),
+                          ),
+                        );
+                      } catch (e) {
+                        debugPrint(e.toString());
+                      }
+
+                    }),
                 SizedBox(height: 10),
                 MyTextButton(
                   text: 'ورود با ایمیل',
@@ -115,5 +124,4 @@ class LoginByNumberScreen extends StatelessWidget{
       ),
     );
   }
-
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../data/data.dart';
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
@@ -11,15 +12,15 @@ import '../../widgets/my_textfield.dart';
 import '../enter_code/email_code_screen.dart';
 import 'login_by_number_screen.dart';
 
-class LoginByEmailScreen extends StatelessWidget{
+class LoginByEmailScreen extends StatelessWidget {
   const LoginByEmailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController emailController=TextEditingController();
+    TextEditingController emailController = TextEditingController();
     final ThemeData theme = Theme.of(context);
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
       },
       child: Scaffold(
@@ -79,21 +80,26 @@ class LoginByEmailScreen extends StatelessWidget{
                 ),
                 SizedBox(height: 20),
                 Alert(text: 'ایمیل وارد شده استباه است'),
-
                 SizedBox(height: 20),
                 MyTextField(
-                  controller: emailController,
+                    controller: emailController,
                     text: 'ایمیل',
                     icon: 'email',
                     textInputType: TextInputType.emailAddress),
                 SizedBox(height: 20),
-                MyButton2(text: 'ورود به برنامه', ontap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => EmailCodeScreen(email: emailController.text),
-                    ),
-                  );
-                }),
+                MyButton2(
+                    text: 'ورود به برنامه',
+                    ontap: () {
+                      try {
+                        loginEmail(emailController.text);
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                EmailCodeScreen(email: emailController.text),
+                          ),
+                        );
+                      } catch (e) {}
+                    }),
                 SizedBox(height: 10),
                 MyTextButton(
                   text: 'ورود با شماره همراه',
@@ -113,5 +119,4 @@ class LoginByEmailScreen extends StatelessWidget{
       ),
     );
   }
-
 }

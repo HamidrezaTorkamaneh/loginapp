@@ -4,6 +4,7 @@ import 'package:loginapp/data/enter_code.dart';
 import 'package:loginapp/screens/enter_code/number_code_screen.dart';
 import 'package:loginapp/screens/login_screens/login_by_email_screen.dart';
 import 'package:loginapp/screens/login_screens/login_by_number_screen.dart';
+import 'package:loginapp/screens/login_screens/login_screen.dart';
 import 'package:loginapp/screens/splash_screen.dart';
 
 void main() {
@@ -77,7 +78,7 @@ class MyApp extends StatelessWidget {
         Locale("fa", "IR"),
       ],
       debugShowCheckedModeBanner: false,
-      home:SplashScreen(),
+      home:LoginScreen(),
     );
   }
 }
