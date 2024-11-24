@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
         Locale("fa", "IR"),
       ],
       debugShowCheckedModeBanner: false,
-      home:LoginScreen(),
+      home:SplashScreen(),
     );
   }
 }

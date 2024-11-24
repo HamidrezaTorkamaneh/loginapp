@@ -98,7 +98,9 @@ class LoginByEmailScreen extends StatelessWidget {
                                 EmailCodeScreen(email: emailController.text),
                           ),
                         );
-                      } catch (e) {}
+                      } catch (e) {
+                        debugPrint(e.toString());
+                      }
                     }),
                 SizedBox(height: 10),
                 MyTextButton(

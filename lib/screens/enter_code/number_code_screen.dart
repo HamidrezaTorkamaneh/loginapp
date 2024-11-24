@@ -9,6 +9,7 @@ import 'package:loginapp/widgets/input_information.dart';
 import 'package:loginapp/widgets/my_button2.dart';
 import 'package:loginapp/widgets/my_text_button.dart';
 import 'package:loginapp/widgets/otp.dart';
+import 'package:loginapp/widgets/pin_code.dart';
 import 'package:slide_countdown/slide_countdown.dart';
 
 import '../../widgets/alert.dart';
@@ -127,8 +128,7 @@ class _NumberCodeScreenState extends State<NumberCodeScreen> {
                   typeName: 'شماره همراه',
                 ),
                 SizedBox(height: 20),
-                OTP(),
-                SizedBox(height: 20),
+                PinCode(),
                 Row(
                   children: [
                     CustomIcon(
@@ -154,7 +154,6 @@ class _NumberCodeScreenState extends State<NumberCodeScreen> {
                     Navigator.of(context).pop();
                   },
                 ),
-
               ],
             ),
           ),

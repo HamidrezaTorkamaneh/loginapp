@@ -1,5 +1,3 @@
-
-
 import 'package:dio/dio.dart';
 
 class LoginData {
@@ -30,13 +28,12 @@ Future<LoginData> loginPhone(String phoneNumber) async {
   }
 }
 
-Future<LoginData> loginEmail(String email)async {
-  var reponse=await HttpClient.dio.post('loginEmail/',data: {
-    "email":email
-  });
-  if(reponse.statusCode==200){
+Future<LoginData> loginEmail(String email) async {
+  var reponse =
+      await HttpClient.dio.post('loginEmail/', data: {"email": email});
+  if (reponse.statusCode == 200) {
     return LoginData.fromJson(reponse.data);
-  }else{
+  } else {
     throw Exception();
   }
 }
