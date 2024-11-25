@@ -1,22 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loginapp/data/data.dart';
 import 'package:loginapp/widgets/cusotm_icon.dart';
 import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/input_information.dart';
+import 'package:loginapp/widgets/pin_code.dart';
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
 import '../../widgets/count_down.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
+import '../../widgets/loading_dialog.dart';
 import '../../widgets/my_button2.dart';
 import '../../widgets/my_text_button.dart';
 import '../../widgets/otp.dart';
 
-class EmailCodeScreen extends StatelessWidget {
+class EmailCodeScreen extends StatefulWidget {
   String email;
 
   EmailCodeScreen({super.key, required this.email});
+
+  @override
+  State<EmailCodeScreen> createState() => _EmailCodeScreenState();
+}
+
+class _EmailCodeScreenState extends State<EmailCodeScreen> {
+  int? verifyCode;
 
   @override
   Widget build(BuildContext context) {
@@ -92,13 +102,16 @@ class EmailCodeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 InputInformation(
-                  input: email,
+                  input: widget.email,
                   icon: 'email',
                   typeName: 'ایمیل',
                 ),
                 SizedBox(height: 20),
-                OTP(),
-                SizedBox(height: 20),
+                PinCode(
+                  onChange: (verifyCode) {
+                    this.verifyCode = verifyCode;
+                  },
+                ),
                 Row(
                   children: [
                     CustomIcon(
@@ -115,7 +128,36 @@ class EmailCodeScreen extends StatelessWidget {
                 SizedBox(height: 15),
                 MyButton2(
                   text: 'تایید و ورود',
-                  ontap: () {},
+                  ontap: () {
+                    if (verifyCode == null) return;
+                    showGeneralDialog(
+                      barrierLabel: '',
+                      barrierDismissible: true,
+                      barrierColor: Colors.black.withOpacity(0.3),
+                      context: context,
+                      pageBuilder: (context, animation, secondaryAnimation) {
+                        return Container();
+                      },
+                      transitionBuilder: (context, a1, a2, widget) {
+                        return ScaleTransition(
+                          scale: Tween<double>(begin: 0, end: 1).animate(a1),
+                          child: const Dialog(
+                            shape: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(22),
+                                ),
+                                borderSide: BorderSide.none),
+                            insetPadding:
+                            EdgeInsets.symmetric(horizontal: 22),
+                            child: LoadingDialog(),
+                          ),
+                        );
+                      },
+                    );
+                    try {
+                      verifyEmail(widget.email, verifyCode!);
+                    } catch (e) {}
+                  },
                 ),
                 MyTextButton(
                     text: 'تغییر شماره همراه',

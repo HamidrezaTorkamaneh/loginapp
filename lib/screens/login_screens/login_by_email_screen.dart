@@ -95,7 +95,7 @@ class LoginByEmailScreen extends StatelessWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                EmailCodeScreen(email: emailController.text),
+                                EmailCodeScreen(email: emailController.value.text),
                           ),
                         );
                       } catch (e) {

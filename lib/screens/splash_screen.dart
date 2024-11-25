@@ -1,9 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loginapp/screens/login_screens/login_screen.dart';
-import 'package:loginapp/screens/signup_screens/signup_screen.dart';
 import 'package:loginapp/widgets/cusotm_icon.dart';
 import 'package:loginapp/widgets/custom_image.dart';
 import 'dart:math' as math;
@@ -72,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen>
                     );
                   },
                   child: CustomIcon(
-                    icon: 'loading',
+                    icon: 'loading1',
                     color: Colors.white,
                     size: 25,
                   ),

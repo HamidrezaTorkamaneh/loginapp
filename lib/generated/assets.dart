@@ -4,7 +4,7 @@ class Assets {
 
   static const String dataData = 'lib/data/data.dart';
   static const String dataEnterCode = 'lib/data/enter_code.dart';
-  // static const String dataEnterCode.g = 'lib/data/enter_code.g.dart';
+  static const String dataEnterCode.g = 'lib/data/enter_code.g.dart';
   static const String enterCodeEmailCodeScreen = 'lib/screens/enter_code/email_code_screen.dart';
   static const String enterCodeNumberCodeScreen = 'lib/screens/enter_code/number_code_screen.dart';
   static const String fontsEstedadBlack = 'assets/fonts/Estedad-Black.ttf';
@@ -32,7 +32,8 @@ class Assets {
   static const String imagesIconCall = 'assets/images/icon_call.svg';
   static const String imagesIconClock = 'assets/images/icon_clock.svg';
   static const String imagesIconEmail = 'assets/images/icon_email.svg';
-  static const String imagesIconLoading = 'assets/images/icon_loading.svg';
+  static const String imagesIconLoading1 = 'assets/images/icon_loading1.svg';
+  static const String imagesIconLoading2 = 'assets/images/icon_loading2.svg';
   static const String imagesIconRating = 'assets/images/icon_rating.svg';
   static const String imagesIconReturn = 'assets/images/icon_return.svg';
   static const String imagesIconUser = 'assets/images/icon_user.svg';
@@ -53,6 +54,7 @@ class Assets {
   static const String widgetsCustomColor = 'lib/widgets/custom_color.dart';
   static const String widgetsCustomImage = 'lib/widgets/custom_image.dart';
   static const String widgetsInputInformation = 'lib/widgets/input_information.dart';
+  static const String widgetsLoadingDialog = 'lib/widgets/loading_dialog.dart';
   static const String widgetsMyButton1 = 'lib/widgets/my_button1.dart';
   static const String widgetsMyButton2 = 'lib/widgets/my_button2.dart';
   static const String widgetsMyTextButton = 'lib/widgets/my_text_button.dart';

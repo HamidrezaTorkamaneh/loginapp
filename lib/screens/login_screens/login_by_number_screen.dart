@@ -97,7 +97,7 @@ class LoginByNumberScreen extends StatelessWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                NumberCodeScreen(number: numberController.text),
+                                NumberCodeScreen(number: numberController.value.text),
                           ),
                         );
                       } catch (e) {

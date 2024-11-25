@@ -1,22 +1,20 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:loginapp/data/data.dart';
 import 'package:loginapp/widgets/count_down.dart';
 import 'package:loginapp/widgets/cusotm_icon.dart';
 import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/input_information.dart';
 import 'package:loginapp/widgets/my_button2.dart';
 import 'package:loginapp/widgets/my_text_button.dart';
-import 'package:loginapp/widgets/otp.dart';
 import 'package:loginapp/widgets/pin_code.dart';
-import 'package:slide_countdown/slide_countdown.dart';
 
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
+import '../../widgets/loading_dialog.dart';
 
 class NumberCodeScreen extends StatefulWidget {
   String number;
@@ -30,6 +28,7 @@ class NumberCodeScreen extends StatefulWidget {
 class _NumberCodeScreenState extends State<NumberCodeScreen> {
   int _seconds = 0;
   Timer? _timer;
+  int? verifyCode;
 
   @override
   void dispose() {
@@ -52,6 +51,7 @@ class _NumberCodeScreenState extends State<NumberCodeScreen> {
 
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+    TextEditingController codeController = TextEditingController();
     return GestureDetector(
       onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
@@ -123,12 +123,16 @@ class _NumberCodeScreenState extends State<NumberCodeScreen> {
                 ),
                 SizedBox(height: 20),
                 InputInformation(
-                  input: widget.number.toString(),
+                  input: widget.number,
                   icon: 'call',
                   typeName: 'شماره همراه',
                 ),
                 SizedBox(height: 20),
-                PinCode(),
+                PinCode(
+                  onChange: (verifyCode) {
+                    this.verifyCode = verifyCode;
+                  },
+                ),
                 Row(
                   children: [
                     CustomIcon(
@@ -145,7 +149,36 @@ class _NumberCodeScreenState extends State<NumberCodeScreen> {
                 SizedBox(height: 15),
                 MyButton2(
                   text: 'تایید و ورود',
-                  ontap: () {},
+                  ontap: () {
+                    if (verifyCode == null) return;
+                    try {
+                      verifyNumber(widget.number, verifyCode!);
+                      showGeneralDialog(
+                        barrierLabel: '',
+                        barrierDismissible: true,
+                        barrierColor: Colors.black.withOpacity(0.3),
+                        context: context,
+                        pageBuilder: (context, animation, secondaryAnimation) {
+                          return Container();
+                        },
+                        transitionBuilder: (context, a1, a2, widget) {
+                          return ScaleTransition(
+                            scale: Tween<double>(begin: 0, end: 1).animate(a1),
+                            child: const Dialog(
+                              shape: OutlineInputBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(22),
+                                  ),
+                                  borderSide: BorderSide.none),
+                              insetPadding:
+                                  EdgeInsets.symmetric(horizontal: 22),
+                              child: LoadingDialog(),
+                            ),
+                          );
+                        },
+                      );
+                    } catch (e) {}
+                  },
                 ),
                 MyTextButton(
                   text: 'تغییر شماره همراه',

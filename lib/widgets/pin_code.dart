@@ -1,16 +1,18 @@
-
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
+class PinCode extends StatefulWidget {
+  final void Function(int verifycode) onChange;
 
-class PinCode extends StatefulWidget{
-  const PinCode({super.key});
+  PinCode({super.key, required this.onChange});
 
   @override
   State<PinCode> createState() => _PinCodeState();
 }
 
 class _PinCodeState extends State<PinCode> {
+  TextEditingController codeController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -43,7 +45,7 @@ class _PinCodeState extends State<PinCode> {
           inactiveBorderWidth: 0,
           selectedBorderWidth: 0,
           activeFillColor: Colors.white,
-          inactiveFillColor:Colors.white,
+          inactiveFillColor: Colors.white,
           // selectedColor: Colors.white,
           // activeColor: Colors.red,
           // disabledColor: Colors.white,
@@ -51,14 +53,16 @@ class _PinCodeState extends State<PinCode> {
         cursorColor: Colors.black,
         animationDuration: const Duration(milliseconds: 300),
         enableActiveFill: true,
-        // controller: codeController,
+        controller: codeController,
         keyboardType: TextInputType.number,
-        // onChanged: (v) {
-        //   setState(() {});
-        //   if (errorText.isFill()) {
-        //     validate();
-        //   }
-        // },
+        onChanged: (v) {
+          // setState(() {});
+
+          try {
+            final code = int.parse(v);
+            widget.onChange(code);
+          } catch (e) {}
+        },
         // onCompleted: (v) {
         //   _submit();
         // },
