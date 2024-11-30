@@ -1,20 +1,18 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:loginapp/data/data.dart';
-import 'package:loginapp/widgets/count_down.dart';
 import 'package:loginapp/widgets/cusotm_icon.dart';
 import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/input_information.dart';
 import 'package:loginapp/widgets/my_button2.dart';
 import 'package:loginapp/widgets/my_text_button.dart';
 import 'package:loginapp/widgets/pin_code.dart';
-
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
 import '../../widgets/loading_dialog.dart';
+import '../../widgets/time_counter.dart';
 
 class NumberCodeScreen extends StatefulWidget {
   String number;
@@ -27,26 +25,12 @@ class NumberCodeScreen extends StatefulWidget {
 
 class _NumberCodeScreenState extends State<NumberCodeScreen> {
   int _seconds = 0;
-  Timer? _timer;
+
   int? verifyCode;
 
   @override
   void dispose() {
-    _timer?.cancel();
     super.dispose();
-  }
-
-  void startTimer() {
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
-      setState(() {
-        _seconds++;
-      });
-    });
-  }
-
-  void stopTimer() {
-    _timer?.cancel();
-    _seconds = 0;
   }
 
   Widget build(BuildContext context) {
@@ -143,7 +127,18 @@ class _NumberCodeScreenState extends State<NumberCodeScreen> {
                       style: theme.textTheme.headline5,
                     ),
                     Spacer(),
-                    AddTimer(),
+                    TimeCounter(
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                NumberCodeScreen(number: widget.number),
+                          ),
+                        );
+                      },
+                      input: widget.number,
+                      isPhone: true,
+                    ),
                   ],
                 ),
                 SizedBox(height: 15),

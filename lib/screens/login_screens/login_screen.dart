@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget{
         preferredSize: const Size.fromHeight(70),
       ),
       body: Container(
-        padding: EdgeInsets.fromLTRB(22, 110, 22, 60),
+        padding: EdgeInsets.fromLTRB(22, 110, 22,40),
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/effect1.png'),

@@ -8,13 +8,13 @@ import 'package:loginapp/widgets/pin_code.dart';
 import '../../widgets/alert.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
-import '../../widgets/count_down.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
 import '../../widgets/loading_dialog.dart';
 import '../../widgets/my_button2.dart';
 import '../../widgets/my_text_button.dart';
 import '../../widgets/otp.dart';
+import '../../widgets/time_counter.dart';
 
 class EmailCodeScreen extends StatefulWidget {
   String email;
@@ -122,7 +122,19 @@ class _EmailCodeScreenState extends State<EmailCodeScreen> {
                       style: theme.textTheme.headline5,
                     ),
                     Spacer(),
-                    AddTimer(),
+                    TimeCounter(
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (context) => EmailCodeScreen(
+                              email: widget.email,
+                            ),
+                          ),
+                        );
+                      },
+                      input: widget.email,
+                      isPhone: false,
+                    ),
                   ],
                 ),
                 SizedBox(height: 15),
@@ -147,8 +159,7 @@ class _EmailCodeScreenState extends State<EmailCodeScreen> {
                                   Radius.circular(22),
                                 ),
                                 borderSide: BorderSide.none),
-                            insetPadding:
-                            EdgeInsets.symmetric(horizontal: 22),
+                            insetPadding: EdgeInsets.symmetric(horizontal: 22),
                             child: LoadingDialog(),
                           ),
                         );
