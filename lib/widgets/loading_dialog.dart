@@ -35,7 +35,7 @@ class _LoadingDialogState extends State<LoadingDialog>  with SingleTickerProvide
                 child: child,
               );
             },
-            child: CustomIcon(icon: 'loading2', color: CustomColor.greenColor, size: 30),
+            child: CustomIcon(icon: 'loading2', color: CustomColor.greenColor1, size: 30),
           ),
           SizedBox(height: 25),
           Text('درحال بررسی ...',style: theme.textTheme.bodyText1?.apply(

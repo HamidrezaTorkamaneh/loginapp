@@ -37,7 +37,7 @@ class InputInformation extends StatelessWidget{
           SizedBox(width: 8),
           Padding(
             padding: const EdgeInsets.only(top: 5),
-            child: CustomIcon(icon: icon , color: CustomColor.greenColor, size: 17),
+            child: CustomIcon(icon: icon , color: CustomColor.greenColor1, size: 17),
           )
         ],
       ),

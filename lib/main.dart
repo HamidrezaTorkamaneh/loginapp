@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:loginapp/data/enter_code.dart';
 import 'package:loginapp/screens/enter_code/number_code_screen.dart';
+import 'package:loginapp/screens/ideas/mahdavi_idaes_screen.dart';
 import 'package:loginapp/screens/login_screens/login_by_email_screen.dart';
 import 'package:loginapp/screens/login_screens/login_by_number_screen.dart';
 import 'package:loginapp/screens/login_screens/login_screen.dart';
@@ -78,7 +79,7 @@ class MyApp extends StatelessWidget {
         Locale("fa", "IR"),
       ],
       debugShowCheckedModeBanner: false,
-      home:SplashScreen(),
+      home:MahdaviIdeasScreen(),
     );
   }
 }

@@ -120,7 +120,7 @@ class _NumberCodeScreenState extends State<NumberCodeScreen> {
                 Row(
                   children: [
                     CustomIcon(
-                        icon: 'clock', color: CustomColor.greenColor, size: 25),
+                        icon: 'clock', color: CustomColor.greenColor1, size: 25),
                     SizedBox(width: 10),
                     Text(
                       'زمان باقی مانده تا ارسال مجدد',

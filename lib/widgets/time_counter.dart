@@ -53,7 +53,7 @@ class _TimeCounterState extends State<TimeCounter> {
       textDirection: TextDirection.ltr,
       child: SlideCountdown(
         padding: EdgeInsets.symmetric(vertical: 3, horizontal: 10),
-        duration: Duration(seconds: 10),
+        duration: Duration(minutes: 2),
         style: TextStyle(
           fontFamily: 'YB',
           fontSize: 12,

@@ -45,7 +45,7 @@ class MyTextField extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 4),
             child:
-                CustomIcon(icon: icon, color: CustomColor.greenColor, size: 28),
+                CustomIcon(icon: icon, color: CustomColor.greenColor1, size: 28),
           ),
         ],
       ),

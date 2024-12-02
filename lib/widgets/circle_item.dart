@@ -12,7 +12,7 @@ class CircleItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       maxRadius: 55,
-      backgroundColor: CustomColor.purpleColor,
+      backgroundColor: CustomColor.purpleColor1,
       child: Padding(
         padding: const EdgeInsets.only(top: 10),
         child: Center(
