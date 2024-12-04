@@ -63,9 +63,9 @@ class _MahdaviIdeasScreenState extends State<MahdaviIdeasScreen> {
       backgroundColor: CustomColor.backGroundColor,
       body: Stack(
         children: [
-          const Align(
+           Align(
             alignment: Alignment.topCenter,
-            child: Header(),
+            child: Header(text: 'ایده‌های مهدوی',),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 90),

@@ -5,7 +5,8 @@ import 'cusotm_icon.dart';
 import 'custom_color.dart';
 
 class Header extends StatelessWidget{
-  const Header({super.key});
+  String text;
+  Header({super.key,required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class Header extends StatelessWidget{
             child: Row(
               children: [
                 Text(
-                  'ایده‌های مهدوی',
+                  text,
                   style: theme.textTheme.bodyText2,
                 ),
                 Spacer(),

@@ -76,7 +76,7 @@ class IdeaItems extends StatelessWidget{
           Text(
             'روزانه به یک برای حل مشکلش با انجام کارش کمک کنید.روزانه به یک برای حل مشکلش با انجام کارش کمک کنید.روزانه به یک برای حل مشکلش با انجام کارش کمک کنید.',
             textAlign: TextAlign.justify,
-            style: theme.textTheme.headline5?.apply(
+            style: theme.textTheme.headline4?.apply(
               color: Colors.black,
               heightDelta: 0.5,
             ),

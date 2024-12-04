@@ -11,7 +11,7 @@ class MyButton2 extends StatelessWidget{
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     return  Container(
-
+      margin: EdgeInsets.symmetric(horizontal: 22),
       width: double.infinity,
       height: 85,
       decoration: BoxDecoration(
