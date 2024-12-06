@@ -4,19 +4,18 @@ import 'package:flutter/material.dart';
 import 'cusotm_icon.dart';
 import 'custom_color.dart';
 
-class IdeaItems extends StatelessWidget{
-  const IdeaItems({super.key});
-
+class IdeaItem2 extends StatelessWidget{
+  const IdeaItem2({super.key});
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
+    final ThemeData theme=Theme.of(context);
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 22,vertical: 5),
-      padding: EdgeInsets.symmetric(horizontal: 22, vertical: 25),
-      height: 250,
+      margin: EdgeInsets.symmetric(horizontal: 22, vertical: 5),
+      padding: EdgeInsets.symmetric(horizontal: 22, vertical: 20),
       width: double.infinity,
+      height: 180,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(25),
         color: Colors.white,
       ),
       child: Column(
@@ -51,49 +50,41 @@ class IdeaItems extends StatelessWidget{
               ),
               Spacer(),
               CustomIcon(
-                  icon: 'file',
-                  color: CustomColor.greenColor2,
+                  icon: 'contact',
+                  color: CustomColor.greyColor2,
                   size: 20),
-              SizedBox(width: 5),
+              SizedBox(width: 10),
               Text(
-                'ایده‌های پیشنهادی',
+                'کامران مهدوری فر',
                 style: theme.textTheme.headline3?.apply(
                   color: Colors.black,
-                  fontFamily: 'YB',
                 ),
               ),
             ],
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Text(
-            'مسلم زمان',
+            'روزانه به یک برای حل مشکلش با انجام کارش کمک کنید.',
             style: theme.textTheme.headline4?.apply(
+              color: Colors.black,
               fontFamily: 'YB',
-              color: Colors.black,
-            ),
-          ),
-          SizedBox(height: 20),
-          Text(
-            'روزانه به یک برای حل مشکلش با انجام کارش کمک کنید.روزانه به یک برای حل مشکلش با انجام کارش کمک کنید.روزانه به یک برای حل مشکلش با انجام کارش کمک کنید.',
-            textAlign: TextAlign.justify,
-            style: theme.textTheme.headline4?.apply(
-              color: Colors.black,
               heightDelta: 0.5,
             ),
           ),
-          Spacer(),
+          SizedBox(height: 10),
           Row(
             children: [
               CustomIcon(
-                  icon: 'arrow_forward_circle',
-                  color: CustomColor.greyColor,
-                  size: 30),
+                  icon: 'file',
+                  color: CustomColor.greenColor2,
+                  size: 20),
+              SizedBox(width: 10),
               Text(
-                'جزییات',
-                style: theme.textTheme.headline5?.apply(
+                'دسته بندی مطلب',
+                style: theme.textTheme.headline3?.apply(
                   color: Colors.black,
                 ),
-              ),
+              )
             ],
           )
         ],

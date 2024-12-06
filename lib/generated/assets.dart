@@ -21,6 +21,7 @@ class Assets {
   static const String fontsYekanBakhMedium = 'assets/fonts/YekanBakh-Medium.ttf';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String ideasAddIdeaScreen = 'lib/screens/ideas/add_idea_screen.dart';
+  static const String ideasDetailIdeaScreen = 'lib/screens/ideas/detail_idea_screen.dart';
   static const String ideasMahdaviIdaesScreen = 'lib/screens/ideas/mahdavi_idaes_screen.dart';
   static const String imagesDavazdahLego = 'assets/images/davazdah_lego.png';
   static const String imagesDavazdahText = 'assets/images/davazdah_text.png';
@@ -37,6 +38,8 @@ class Assets {
   static const String imagesIconCall = 'assets/images/icon_call.svg';
   static const String imagesIconCheckList = 'assets/images/icon_check_list.svg';
   static const String imagesIconClock = 'assets/images/icon_clock.svg';
+  static const String imagesIconContact = 'assets/images/icon_contact.svg';
+  static const String imagesIconDocument = 'assets/images/icon_document.svg';
   static const String imagesIconEmail = 'assets/images/icon_email.svg';
   static const String imagesIconFile = 'assets/images/icon_file.svg';
   static const String imagesIconHome = 'assets/images/icon_home.svg';
@@ -47,8 +50,10 @@ class Assets {
   static const String imagesIconMenu = 'assets/images/icon_menu.svg';
   static const String imagesIconPlusSquare = 'assets/images/icon_plus_square.svg';
   static const String imagesIconRating = 'assets/images/icon_rating.svg';
+  static const String imagesIconReport = 'assets/images/icon_report.svg';
   static const String imagesIconReturn = 'assets/images/icon_return.svg';
   static const String imagesIconSearch = 'assets/images/icon_search.svg';
+  static const String imagesIconShare = 'assets/images/icon_share.svg';
   static const String imagesIconUser = 'assets/images/icon_user.svg';
   static const String libMain = 'lib/main.dart';
   static const String loginScreensLoginByEmailScreen = 'lib/screens/login_screens/login_by_email_screen.dart';
@@ -67,7 +72,8 @@ class Assets {
   static const String widgetsCustomImage = 'lib/widgets/custom_image.dart';
   static const String widgetsGetFloatingActionButton = 'lib/widgets/get_floating_action_button.dart';
   static const String widgetsHeader = 'lib/widgets/header.dart';
-  static const String widgetsIdeaItems = 'lib/widgets/idea_items.dart';
+  static const String widgetsIdeaItem2 = 'lib/widgets/idea_item2.dart';
+  static const String widgetsIdeaItems1 = 'lib/widgets/idea_items1.dart';
   static const String widgetsInputInformation = 'lib/widgets/input_information.dart';
   static const String widgetsLoadingDialog = 'lib/widgets/loading_dialog.dart';
   static const String widgetsMenuItem = 'lib/widgets/menu_item.dart';

@@ -7,11 +7,12 @@ import 'package:loginapp/widgets/cusotm_icon.dart';
 import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/get_floating_action_button.dart';
 import 'package:loginapp/widgets/header.dart';
-import 'package:loginapp/widgets/idea_items.dart';
+
 import 'package:loginapp/widgets/sort_idea_item.dart';
 
 import '../../widgets/appbar_button.dart';
 import '../../widgets/custom_appbar.dart';
+import '../../widgets/idea_items1.dart';
 
 class MahdaviIdeasScreen extends StatefulWidget {
   const MahdaviIdeasScreen({super.key});
@@ -39,7 +40,7 @@ class _MahdaviIdeasScreenState extends State<MahdaviIdeasScreen> {
             AppbarButton(
               icon: 'search',
               size: 60,
-              color: CustomColor.greyColor,
+              color: CustomColor.greyColor1,
             )
           ],
           leading: InkWell(
@@ -54,7 +55,7 @@ class _MahdaviIdeasScreenState extends State<MahdaviIdeasScreen> {
             child: AppbarButton(
               icon: 'arrow_back_circle',
               size: 60,
-              color: CustomColor.greyColor,
+              color: CustomColor.greyColor1,
             ),
           ),
         ),
@@ -63,9 +64,11 @@ class _MahdaviIdeasScreenState extends State<MahdaviIdeasScreen> {
       backgroundColor: CustomColor.backGroundColor,
       body: Stack(
         children: [
-           Align(
+          Align(
             alignment: Alignment.topCenter,
-            child: Header(text: 'ایده‌های مهدوی',),
+            child: Header(
+              text: 'ایده‌های مهدوی',
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 90),
@@ -74,7 +77,7 @@ class _MahdaviIdeasScreenState extends State<MahdaviIdeasScreen> {
               child: ListView.builder(
                 itemCount: 5,
                 itemBuilder: (context, index) {
-                  return IdeaItems();
+                  return IdeaItems1();
                 },
               ),
             ),
