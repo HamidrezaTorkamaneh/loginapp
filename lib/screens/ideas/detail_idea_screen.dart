@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:loginapp/widgets/button_item.dart';
 import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/header.dart';
 import 'package:loginapp/widgets/idea_item2.dart';
@@ -104,7 +105,65 @@ class DetailIdeaScreen extends StatelessWidget {
                 textAlign: TextAlign.justify,
               ),
             ),
+            SizedBox(height: 200),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 22),
+              width: double.infinity,
+              height: 80,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.white,
+              ),
+              child: Row(
+                children: [
+                  copyText(context),
+                  ButtonItem(text: 'نظرات', icon: 'comment', onTap: () {}),
+                  ButtonItem(
+                      text: 'علاقه‌مندی', icon: 'book_mark', onTap: () {}),
+                  ButtonItem(text: 'فونت', icon: 'font', onTap: () {}),
+                  ButtonItem(text: 'شکلک', icon: 'emoji', onTap: () {}),
+                ],
+              ),
+            )
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget copyText(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    return Container(
+      height: double.infinity,
+      width: 80,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: CustomColor.greenShadowColor,
+      ),
+      child: Material(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.transparent,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(20),
+          onTap: () {},
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomIcon(
+                icon: 'copy',
+                color: CustomColor.greenColor2,
+                size: 25,
+              ),
+              SizedBox(height: 8),
+              Text(
+                'کپی متن',
+                style: theme.textTheme.headline5?.apply(
+                  color: Colors.black,
+                  fontFamily: 'YB',
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -15,7 +15,7 @@ class Alert extends StatelessWidget {
       height: 32,
       width: 200,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8), color: CustomColor.redColor),
+          borderRadius: BorderRadius.circular(8), color: CustomColor.redShadowColor),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

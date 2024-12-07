@@ -15,7 +15,7 @@ class IdeaItem2 extends StatelessWidget{
       width: double.infinity,
       height: 180,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(20),
         color: Colors.white,
       ),
       child: Column(
