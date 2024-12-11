@@ -74,11 +74,14 @@ class _MahdaviIdeasScreenState extends State<MahdaviIdeasScreen> {
             padding: const EdgeInsets.only(top: 90),
             child: SizedBox(
               height: 780,
-              child: ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return IdeaItems1();
-                },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 22),
+                child: ListView.builder(
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return IdeaItems1();
+                  },
+                ),
               ),
             ),
           ),

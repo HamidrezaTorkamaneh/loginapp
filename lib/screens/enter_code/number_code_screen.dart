@@ -11,7 +11,7 @@ import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
-import '../../widgets/loading_dialog.dart';
+import '../../dialogs/loading_dialog.dart';
 import '../../widgets/time_counter.dart';
 
 class NumberCodeScreen extends StatefulWidget {

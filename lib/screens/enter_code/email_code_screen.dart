@@ -10,7 +10,7 @@ import '../../widgets/appbar_button.dart';
 import '../../widgets/circle_item.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_image.dart';
-import '../../widgets/loading_dialog.dart';
+import '../../dialogs/loading_dialog.dart';
 import '../../widgets/my_button2.dart';
 import '../../widgets/my_text_button.dart';
 import '../../widgets/otp.dart';

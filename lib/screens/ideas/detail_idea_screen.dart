@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:loginapp/dialogs/font_dialog.dart';
 import 'package:loginapp/widgets/button_item.dart';
 import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/header.dart';
 import 'package:loginapp/widgets/idea_item2.dart';
 import 'package:loginapp/widgets/idea_items1.dart';
 
+import '../../dialogs/loading_dialog.dart';
 import '../../widgets/appbar_button.dart';
 import '../../widgets/cusotm_icon.dart';
 import '../../widgets/custom_appbar.dart';
@@ -120,7 +122,31 @@ class DetailIdeaScreen extends StatelessWidget {
                   ButtonItem(text: 'نظرات', icon: 'comment', onTap: () {}),
                   ButtonItem(
                       text: 'علاقه‌مندی', icon: 'book_mark', onTap: () {}),
-                  ButtonItem(text: 'فونت', icon: 'font', onTap: () {}),
+                  ButtonItem(text: 'فونت', icon: 'font', onTap: () {
+                    showGeneralDialog(
+                      barrierLabel: '',
+                      barrierDismissible: true,
+                      barrierColor: CustomColor.backGroundColor.withOpacity(0.5),
+                      context: context,
+                      pageBuilder: (context, animation, secondaryAnimation) {
+                        return Container();
+                      },
+                      transitionBuilder: (context, a1, a2, widget) {
+                        return ScaleTransition(
+                          scale: Tween<double>(begin: 0, end: 1).animate(a1),
+                          child: const Dialog(
+                            shape: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(22),
+                                ),
+                                borderSide: BorderSide.none),
+                            insetPadding: EdgeInsets.symmetric(horizontal: 22),
+                            child: FontDialog(),
+                          ),
+                        );
+                      },
+                    );
+                  }),
                   ButtonItem(text: 'شکلک', icon: 'emoji', onTap: () {}),
                 ],
               ),

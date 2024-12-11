@@ -26,7 +26,7 @@ class ButtonItem extends StatelessWidget {
         child: InkWell(
           highlightColor: CustomColor.greenShadowColor,
           borderRadius: BorderRadius.circular(20),
-          onTap: () {},
+          onTap: onTap,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

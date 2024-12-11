@@ -82,7 +82,7 @@ class MyApp extends StatelessWidget {
         Locale("fa", "IR"),
       ],
       debugShowCheckedModeBanner: false,
-      home:MyIdeaScreen(),
+      home:MahdaviIdeasScreen(),
     );
   }
 }
