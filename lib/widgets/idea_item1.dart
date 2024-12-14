@@ -5,8 +5,8 @@ import 'package:loginapp/screens/ideas/detail_idea_screen.dart';
 import 'cusotm_icon.dart';
 import 'custom_color.dart';
 
-class IdeaItems1 extends StatelessWidget {
-  const IdeaItems1({super.key});
+class IdeaItem1 extends StatelessWidget {
+  const IdeaItem1({super.key});
 
   @override
   Widget build(BuildContext context) {

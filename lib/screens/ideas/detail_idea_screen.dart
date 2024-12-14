@@ -6,7 +6,7 @@ import 'package:loginapp/widgets/button_item.dart';
 import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/header.dart';
 import 'package:loginapp/widgets/idea_item2.dart';
-import 'package:loginapp/widgets/idea_items1.dart';
+
 
 import '../../dialogs/loading_dialog.dart';
 import '../../widgets/appbar_button.dart';

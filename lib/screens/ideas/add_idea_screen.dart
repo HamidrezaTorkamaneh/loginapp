@@ -128,7 +128,10 @@ class AddIdeaScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 50),
-              MyButton2(text: 'ارسال ایده', ontap: () {})
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 22),
+                child: MyButton2(text: 'ارسال ایده', ontap: () {}),
+              )
             ],
           ),
         ),

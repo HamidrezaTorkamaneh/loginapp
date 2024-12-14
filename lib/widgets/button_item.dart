@@ -8,7 +8,9 @@ class ButtonItem extends StatelessWidget {
   String text;
   String icon;
   void Function() onTap;
-   ButtonItem({super.key,required this.text,required this.icon,required this.onTap});
+
+  ButtonItem(
+      {super.key, required this.text, required this.icon, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -18,20 +20,20 @@ class ButtonItem extends StatelessWidget {
       width: 71,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-
       ),
       child: Material(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.white,
+        color: Colors.transparent,
         child: InkWell(
-          highlightColor: CustomColor.greenShadowColor,
+          overlayColor: MaterialStateColor.resolveWith(
+              (states) => CustomColor.greenShadowColor),
           borderRadius: BorderRadius.circular(20),
           onTap: onTap,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomIcon(
-                icon:icon,
+                icon: icon,
                 color: Colors.black26,
                 size: 25,
               ),
@@ -48,5 +50,4 @@ class ButtonItem extends StatelessWidget {
       ),
     );
   }
-
 }

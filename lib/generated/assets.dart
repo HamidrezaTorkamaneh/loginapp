@@ -23,7 +23,9 @@ class Assets {
   static const String fontsYekanBakhMedium = 'assets/fonts/YekanBakh-Medium.ttf';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String ideasAddIdeaScreen = 'lib/screens/ideas/add_idea_screen.dart';
+  static const String ideasCommentScreen = 'lib/screens/ideas/comment_screen.dart';
   static const String ideasDetailIdeaScreen = 'lib/screens/ideas/detail_idea_screen.dart';
+  static const String ideasListOfTopicsScreen = 'lib/screens/ideas/list_of_topics_screen.dart';
   static const String ideasMahdaviIdaesScreen = 'lib/screens/ideas/mahdavi_idaes_screen.dart';
   static const String ideasMyIdeaScreen = 'lib/screens/ideas/my_idea_screen.dart';
   static const String imagesDavazdahLego = 'assets/images/davazdah_lego.png';
@@ -35,6 +37,7 @@ class Assets {
   static const String imagesIconAlert = 'assets/images/icon_alert.svg';
   static const String imagesIconArrow = 'assets/images/icon_arrow.svg';
   static const String imagesIconArrowBackCircle = 'assets/images/icon_arrow_back_circle.svg';
+  static const String imagesIconArrowBottom = 'assets/images/icon_arrow_bottom.svg';
   static const String imagesIconArrowForwardCircle = 'assets/images/icon_arrow_forward_circle.svg';
   static const String imagesIconArrowLeftCircle = 'assets/images/icon_arrow_left_circle.svg';
   static const String imagesIconAuth = 'assets/images/icon_auth.svg';
@@ -45,6 +48,7 @@ class Assets {
   static const String imagesIconComment = 'assets/images/icon_comment.svg';
   static const String imagesIconContact = 'assets/images/icon_contact.svg';
   static const String imagesIconCopy = 'assets/images/icon_copy.svg';
+  static const String imagesIconDelete = 'assets/images/icon_delete.svg';
   static const String imagesIconDocument = 'assets/images/icon_document.svg';
   static const String imagesIconEmail = 'assets/images/icon_email.svg';
   static const String imagesIconEmoji = 'assets/images/icon_emoji.svg';
@@ -54,12 +58,14 @@ class Assets {
   static const String imagesIconHome = 'assets/images/icon_home.svg';
   static const String imagesIconLight = 'assets/images/icon_light.svg';
   static const String imagesIconList = 'assets/images/icon_list.svg';
+  static const String imagesIconListComment = 'assets/images/icon_list_comment.svg';
   static const String imagesIconLoading1 = 'assets/images/icon_loading1.svg';
   static const String imagesIconLoading2 = 'assets/images/icon_loading2.svg';
   static const String imagesIconMenu = 'assets/images/icon_menu.svg';
   static const String imagesIconPin = 'assets/images/icon_pin.svg';
   static const String imagesIconPlusSquare = 'assets/images/icon_plus_square.svg';
   static const String imagesIconRating = 'assets/images/icon_rating.svg';
+  static const String imagesIconReply = 'assets/images/icon_reply.svg';
   static const String imagesIconReport = 'assets/images/icon_report.svg';
   static const String imagesIconReturn = 'assets/images/icon_return.svg';
   static const String imagesIconScore = 'assets/images/icon_score.svg';
@@ -79,6 +85,7 @@ class Assets {
   static const String widgetsButtonItem = 'lib/widgets/button_item.dart';
   static const String widgetsCategoryItem = 'lib/widgets/category_item.dart';
   static const String widgetsCircleItem = 'lib/widgets/circle_item.dart';
+  static const String widgetsCommentItem = 'lib/widgets/comment_item.dart';
   static const String widgetsCusotmIcon = 'lib/widgets/cusotm_icon.dart';
   static const String widgetsCustomAppbar = 'lib/widgets/custom_appbar.dart';
   static const String widgetsCustomColor = 'lib/widgets/custom_color.dart';
@@ -86,10 +93,12 @@ class Assets {
   static const String widgetsFontSize = 'lib/widgets/font_size.dart';
   static const String widgetsGetFloatingActionButton = 'lib/widgets/get_floating_action_button.dart';
   static const String widgetsHeader = 'lib/widgets/header.dart';
+  static const String widgetsIdeaItem1 = 'lib/widgets/idea_item1.dart';
   static const String widgetsIdeaItem2 = 'lib/widgets/idea_item2.dart';
   static const String widgetsIdeaItem3 = 'lib/widgets/idea_item3.dart';
-  static const String widgetsIdeaItems1 = 'lib/widgets/idea_items1.dart';
+  static const String widgetsIdeaItem4 = 'lib/widgets/idea_item4.dart';
   static const String widgetsInputInformation = 'lib/widgets/input_information.dart';
+  static const String widgetsListTopicItem = 'lib/widgets/list_topic_item.dart';
   static const String widgetsMenuItem = 'lib/widgets/menu_item.dart';
   static const String widgetsMyButton1 = 'lib/widgets/my_button1.dart';
   static const String widgetsMyButton2 = 'lib/widgets/my_button2.dart';
@@ -97,6 +106,7 @@ class Assets {
   static const String widgetsMyTextfield = 'lib/widgets/my_textfield.dart';
   static const String widgetsOtp = 'lib/widgets/otp.dart';
   static const String widgetsPinCode = 'lib/widgets/pin_code.dart';
+  static const String widgetsReplyItem = 'lib/widgets/reply_item.dart';
   static const String widgetsSortIdeaItem = 'lib/widgets/sort_idea_item.dart';
   static const String widgetsTimeCounter = 'lib/widgets/time_counter.dart';
 

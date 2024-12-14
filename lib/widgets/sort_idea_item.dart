@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loginapp/screens/ideas/list_of_topics_screen.dart';
 
 import 'cusotm_icon.dart';
 import 'custom_color.dart';
 
-class SortIdeaItem extends StatefulWidget{
+class SortIdeaItem extends StatefulWidget {
   const SortIdeaItem({super.key});
 
   @override
@@ -13,15 +14,16 @@ class SortIdeaItem extends StatefulWidget{
 
 class _SortIdeaItemState extends State<SortIdeaItem> {
   int index = 0;
+
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    return  Container(
+    return Container(
       height: 70,
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 5),
       decoration: BoxDecoration(
-        boxShadow:[
+        boxShadow: [
           BoxShadow(
             blurRadius: 6,
             spreadRadius: 6,
@@ -33,7 +35,6 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
           topLeft: Radius.circular(15),
         ),
         color: Colors.white,
-
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,7 +43,13 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
             color: CustomColor.backGroundColor,
             borderRadius: BorderRadius.circular(22),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ListOfTopicsScreen(),
+                  ),
+                );
+              },
               borderRadius: BorderRadius.circular(22),
               child: Container(
                 height: 50,
@@ -72,7 +79,6 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
               ),
             ),
           ),
-
           InkWell(
             onTap: () {
               setState(() {
@@ -88,8 +94,9 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
                     child: Visibility(
                       visible: (index == 0) ? true : false,
                       child: Divider(
-                        color:
-                        (index == 0) ? CustomColor.greenColor2 : Colors.grey,
+                        color: (index == 0)
+                            ? CustomColor.greenColor2
+                            : Colors.grey,
                         thickness: 3,
                       ),
                     ),
@@ -105,8 +112,9 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
                       style: TextStyle(
                         fontFamily: 'YB',
                         fontSize: 12,
-                        color:
-                        (index == 0) ? CustomColor.greenColor2 : Colors.grey,
+                        color: (index == 0)
+                            ? CustomColor.greenColor2
+                            : Colors.grey,
                       ),
                     ),
                   ),
@@ -129,8 +137,9 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
                     child: Visibility(
                       visible: (index == 1) ? true : false,
                       child: Divider(
-                        color:
-                        (index == 1) ? CustomColor.greenColor2 : Colors.grey,
+                        color: (index == 1)
+                            ? CustomColor.greenColor2
+                            : Colors.grey,
                         thickness: 3,
                       ),
                     ),
@@ -146,8 +155,9 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
                       style: TextStyle(
                         fontFamily: 'YB',
                         fontSize: 12,
-                        color:
-                        (index == 1) ? CustomColor.greenColor2 : Colors.grey,
+                        color: (index == 1)
+                            ? CustomColor.greenColor2
+                            : Colors.grey,
                       ),
                     ),
                   ),
@@ -170,8 +180,9 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
                     child: Visibility(
                       visible: (index == 2) ? true : false,
                       child: Divider(
-                        color:
-                        (index == 2) ? CustomColor.greenColor2 : Colors.grey,
+                        color: (index == 2)
+                            ? CustomColor.greenColor2
+                            : Colors.grey,
                         thickness: 3,
                       ),
                     ),
@@ -187,8 +198,9 @@ class _SortIdeaItemState extends State<SortIdeaItem> {
                       style: TextStyle(
                         fontFamily: 'YB',
                         fontSize: 12,
-                        color:
-                        (index == 2) ? CustomColor.greenColor2 : Colors.grey,
+                        color: (index == 2)
+                            ? CustomColor.greenColor2
+                            : Colors.grey,
                       ),
                     ),
                   ),

@@ -12,7 +12,8 @@ import 'package:loginapp/widgets/sort_idea_item.dart';
 
 import '../../widgets/appbar_button.dart';
 import '../../widgets/custom_appbar.dart';
-import '../../widgets/idea_items1.dart';
+import '../../widgets/idea_item1.dart';
+
 
 class MahdaviIdeasScreen extends StatefulWidget {
   const MahdaviIdeasScreen({super.key});
@@ -79,7 +80,7 @@ class _MahdaviIdeasScreenState extends State<MahdaviIdeasScreen> {
                 child: ListView.builder(
                   itemCount: 5,
                   itemBuilder: (context, index) {
-                    return IdeaItems1();
+                    return IdeaItem1();
                   },
                 ),
               ),
