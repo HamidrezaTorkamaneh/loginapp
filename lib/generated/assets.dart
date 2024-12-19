@@ -40,6 +40,7 @@ class Assets {
   static const String imagesIconArrowBottom = 'assets/images/icon_arrow_bottom.svg';
   static const String imagesIconArrowForwardCircle = 'assets/images/icon_arrow_forward_circle.svg';
   static const String imagesIconArrowLeftCircle = 'assets/images/icon_arrow_left_circle.svg';
+  static const String imagesIconAttach = 'assets/images/icon_attach.svg';
   static const String imagesIconAuth = 'assets/images/icon_auth.svg';
   static const String imagesIconBookMark = 'assets/images/icon_book_mark.svg';
   static const String imagesIconCall = 'assets/images/icon_call.svg';
@@ -70,6 +71,7 @@ class Assets {
   static const String imagesIconReturn = 'assets/images/icon_return.svg';
   static const String imagesIconScore = 'assets/images/icon_score.svg';
   static const String imagesIconSearch = 'assets/images/icon_search.svg';
+  static const String imagesIconSend = 'assets/images/icon_send.svg';
   static const String imagesIconShare = 'assets/images/icon_share.svg';
   static const String imagesIconUser = 'assets/images/icon_user.svg';
   static const String libMain = 'lib/main.dart';

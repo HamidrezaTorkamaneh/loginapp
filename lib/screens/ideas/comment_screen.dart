@@ -6,7 +6,6 @@ import 'package:loginapp/widgets/custom_color.dart';
 import 'package:loginapp/widgets/idea_item4.dart';
 import 'package:loginapp/widgets/reply_item.dart';
 
-
 import '../../widgets/appbar_button.dart';
 import '../../widgets/comment_item.dart';
 import '../../widgets/cusotm_icon.dart';
@@ -107,10 +106,40 @@ class CommentScreen extends StatelessWidget {
               color: Colors.white,
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CustomIcon(icon: 'emoji', color: CustomColor.greenColor2, size: 20)
+                CircleAvatar(
+                  backgroundColor: CustomColor.greenColor2,
+                  maxRadius: 22,
+                  child: CustomIcon(icon: 'send', color: Colors.white, size: 15),
+                ),
+                SizedBox(width: 10),
+                Icon(
+                  Icons.attach_file,
+                  color: CustomColor.greyColor1,
+                ),
+                SizedBox(width: 10),
+                Container(
+                  width: 200,
+                  height: double.infinity,
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  child: TextField(
+                    style: theme.textTheme.headline3?.apply(
+                        fontSizeDelta: 2
+                    ),
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'پیام خود را اینجا تایپ کنید....',
+                      hintStyle: theme.textTheme.headline3?.apply(
+                        fontSizeDelta: 2
+                      ),
+                    ),
+                  ),
+                ),
+                Spacer(),
+                CustomIcon(
+                    icon: 'emoji', color: CustomColor.greenColor2, size: 20),
               ],
             ),
           )
